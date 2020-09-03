@@ -1,0 +1,38 @@
+/* Спецификации */
+
+*{
+
+}
+
+body{
+
+}
+
+/* Форма регистрации */
+
+.reg{
+
+}
+
+.reg__container{
+    max-height: 400px;
+    max-width: 600px;
+}
+
+.reg__input input{
+    float: right;
+}
+
+.reg__btn{
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+.reg__btn:hover{
+    opacity: 80%;
+}
