@@ -10,20 +10,27 @@ body{
 
 /* Форма регистрации */
 
-.reg{
-
-}
-
-.reg__container{
+.form{
     max-height: 400px;
     max-width: 600px;
 }
 
-.reg__input input{
-    float: right;
+.form h2,p{
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.reg__btn{
+.form__input{
+    margin-bottom: 10px;
+}
+
+.form__input input{
+    float: right;
+    width: 400px
+
+}
+
+.form__btn{
     background-color: #4CAF50;
     color: white;
     padding: 16px 20px;
@@ -33,6 +40,6 @@ body{
     width: 100%;
     opacity: 0.9;
 }
-.reg__btn:hover{
-    opacity: 80%;
+.form__btn:hover{
+    opacity: 1.5;
 }

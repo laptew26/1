@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<form action="auth.php" method="post">
+    <div class="form">
+        <h2>Авторизация</h2>
+        <p class="reg__about">Заполните обязательные поля</p>
+        <div class="form__input">
+            <div class="form__input">
+                <label for="email"><b>Электронная почта</b></label>
+                <input type="email" placeholder="Введите эл. почту" id="email" name="email" required>
+            </div>
+            <div class="form__input">
+                <label for="pass"><b>Пароль</b></label>
+                <input type="password" placeholder="Придумайте пароль" id="pass" name="pass" required>
+            </div>
+        </div>
+        <button type="submit" formaction="auth.php" class="form__btn" >Совершить вход</button>
+    </div>
+</form>
+</body>
+</body>
+</html>
