@@ -11,6 +11,6 @@ $stmt= $pdo->query('INSERT INTO `users`(`email`, `phone`, `pass`) VALUES ("'.$em
                                                                           "'.$pass.'")');
 /*var_dump($pdo->errorInfo());*/
 
-include "reg.html";
+include "index.html";
 
 ?>

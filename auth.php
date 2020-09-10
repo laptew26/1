@@ -1,20 +1,29 @@
-<?php
+<?php 
 
-require_once 'db.php';
+require_once('db.php');
 
-    $email = $_POST["email"];
-    $pass = $_POST["pass"];
+$type = $_GET['type'];
 
-    $email_query = $pdo->query('SELECT * FROM users WHERE email="'. $email .'"');
-    $result = $sth->fetch(PDO::FETCH_ASSOC);
-    print_r($result);
-    print("\n");
-    if (!$email_query) {
-        echo "Добро пожаловать(нет)";
-    }
-    else{
-        echo "Иди своей дорогой сталкер";
-    }
+	$email = $_POST["email-l"];
+	$pass = $_POST["pass-l"];
 
-    var_dump($email_query);
+	$email_query = $pdo->query('SELECT * FROM users WHERE email="'. $email .'" ');
+	if (!$email_query) {
+		echo "yess";
+	} else {
+		foreach ($email_query as $row) {
+		   if (md5($pass) == $row['password']) {
+		   		setcookie("login", $email, time() + 50000);
+				setcookie("pass", md5($pass), time() + 50000);
+				include "index.html";
+		   }
+		   else {
+		   		include "index.html";
+		   }
+		}
+	}
+  
+
+
+
 ?>
